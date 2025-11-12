@@ -1,0 +1,19 @@
+{
+  "name": "mcbot",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "shadowkat",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --env-file=.env index.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "discord.js": "^14.24.2",
+    "express": "^5.1.0",
+    "mineflayer": "^4.33.0",
+    "mineflayer-pathfinder": "^2.4.5"
+  }
+}

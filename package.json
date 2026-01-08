@@ -7,13 +7,19 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "test": "node --env-file=.env index.js"
+    "dev": "node --env-file=.env src/index.js | pino-pretty -i pid,hostname -t 'yyyy-mm-dd HH:MM:ss'",
+    "deploy": "node  --env-file=.env src/discord/deploy-commands.js | pino-pretty -i pid,hostname -t 'yyyy-mm-dd HH:MM:ss'",
+    "dummy": "node --env-file=.env src/minecraft/dummy.js | pino-pretty -i pid,hostname -t 'yyyy-mm-dd HH:MM:ss'",
+    "production": "node src/index.js | pino-pretty -i pid,hostname -t 'yyyy-mm-dd HH:MM:ss'"
   },
   "dependencies": {
     "cors": "^2.8.5",
     "discord.js": "^14.24.2",
     "express": "^5.1.0",
     "mineflayer": "^4.33.0",
-    "mineflayer-pathfinder": "^2.4.5"
+    "mineflayer-pathfinder": "^2.4.5",
+    "pino": "^10.1.0",
+    "pino-pretty": "^13.1.2",
+    "rcon": "^1.1.0"
   }
 }
